@@ -1,6 +1,8 @@
 # Main page
 from reception import reception_main_menu
 
+patients = {}
+
 user = 0
 while (user <= 4):
     print(f'\nWelcome to KLM Medical Centre\n')
@@ -18,8 +20,7 @@ while (user <= 4):
     
     match user:
         case 1:
-            print(f'Welcome to Reception: Main Files.\n')
-            reception_main_menu()
+            reception_main_menu(patients)
             # opens to clinics' main file (patients' directories)
         case 2:
             print(f'Welcome to Doctor\'s Files.\n')

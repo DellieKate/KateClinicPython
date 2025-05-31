@@ -1,9 +1,8 @@
 # Add new patient
-patients = {}
-def add_patient():
+def add_patient(patients):
     first_name = input('Enter first name: ').strip().capitalize()
     last_name = input('Enter last name: ').strip().capitalize()
-    age = int(input('Enter age: ')).strip()
+    age = int(input('Enter age: '))
     sex = input('Enter sex (M/F): ').strip()
     
     full_name = (f'{first_name} {last_name}')
@@ -25,14 +24,15 @@ def add_patient():
         print(f'{name}: {details}')
         
 # to call function to main menu  
-def reception_main_menu():
+def reception_main_menu(patients = {}):
+    print(f'Welcome to Reception: Main Files.\n')
     while True:
-        add_patient()
+        add_patient(patients)
         add = input('Add another patient? (y/n): ').strip().lower()
         if add != 'y':
             break
         
-        
-reception_main_menu()
+# Uncomment to test in isolation
+# reception_main_menu()
         
 
