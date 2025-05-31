@@ -1,8 +1,12 @@
 class Patient:
-    def __init__(self, name, age, sex):
-        self.name = name
+    def __init__(self, full_name, age, sex):
+        self.full_name = full_name
         self.age = age
         self.sex = sex
+        
+    def getDetails(self):
+        return (f'Full name: {self.full_name} | Age: {self.age} | Sex: {self.sex}')    
+
 
 class LabTest:
     def __init__(self, name, description):

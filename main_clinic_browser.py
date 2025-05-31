@@ -1,7 +1,7 @@
 # Main page
 from reception import reception_main_menu
 
-patients = {}
+patient_list = []
 
 user = 0
 while (user <= 4):
@@ -20,19 +20,19 @@ while (user <= 4):
     
     match user:
         case 1:
-            reception_main_menu(patients)
+            reception_main_menu(patient_list)
             # opens to clinics' main file (patients' directories)
         case 2:
-            print(f'Welcome to Doctor\'s Files.\n')
+            print(f'\nWelcome to Doctor\'s Files.\n')
             # opens Doctor's Files
         case 3:
-            print(f'Welcome to Laboratory Department\n')
+            print(f'\nWelcome to Laboratory Department\n')
             # opens lab's files
         case 4:
-            print(f'Thank you!\n')
+            print(f'\nThank you!\n')
             break
         case _:
-            print(f'Invalid user. Please choose another option.\n')
+            print(f'\nInvalid user. Please choose another option.\n')
             user = 0
             #should include error-handling here
             

@@ -1,33 +1,32 @@
+from entities import Patient
+
 # Add new patient
-def add_patient(patients):
-    first_name = input('Enter first name: ').strip().capitalize()
-    last_name = input('Enter last name: ').strip().capitalize()
+def add_patient(patient_list):
+    first_name = str(input('Enter first name: ')).strip().capitalize()
+    last_name = str(input('Enter last name: ')).strip().capitalize()
     age = int(input('Enter age: '))
-    sex = input('Enter sex (M/F): ').strip()
+    sex = str(input('Enter sex (M/F): ')).strip()
     
     full_name = (f'{first_name} {last_name}')
     
-    if full_name in patients:
+    if full_name in patient_list:
         print(f'{full_name} is already an existing patient.')
     else:
-        patients[full_name] = {
-            "first_name": first_name,
-            "last_name": last_name,
-            "age": age,
-            "sex": sex
-        }
-        print(f'{full_name} has been added to patient records.')
+        new_patient = Patient(full_name,age,sex)
+        patient_list.append(new_patient)
+        print(f'{full_name} has been added to Patients\' records.')
+        print(f'{new_patient.getDetails()}')
 
-    # display all patient records
-    print('\nAll patients:')
-    for name, details in patients.items():
-        print(f'{name}: {details}')
+    # Display all patient records
+    # print('\nAll patients:')
+    # for patient in patient_list:
+    #     print(f'{patient.getDetails()}')
         
 # to call function to main menu  
-def reception_main_menu(patients = {}):
-    print(f'Welcome to Reception: Main Files.\n')
+def reception_main_menu(patient_list = []):
+    print(f'\nWelcome to Reception: Main Files.\n')
     while True:
-        add_patient(patients)
+        add_patient(patient_list)
         add = input('Add another patient? (y/n): ').strip().lower()
         if add != 'y':
             break
