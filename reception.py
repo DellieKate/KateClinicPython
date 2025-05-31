@@ -30,11 +30,10 @@ def add_patient(patient_list):
 # to call function to main menu  
 def reception_main_menu(patient_list = []):
     print(f'\n--Welcome to Reception: Main Files--\n')
-    print(f'Please choose an option:\n 1 = Add new patient \n 2 = Print patient report \n 3 = Exit\n')
     option = 0
     while (option <= 4):
-        print(f'Please choose an option:\n 1 = Add new patient \n 2 = Print patient report \n 3 = Exit\n')
-        option = int(input('Option: '))
+        print(f'Please choose an option:\n 1 = Add new patient \n 2 = Export patient details \n 3 = Exit\n')
+        option = int(input('Option: \n'))
         match option:
             case 1:
                 while True:

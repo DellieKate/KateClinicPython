@@ -13,7 +13,7 @@ while (user <= 4):
    
     print(f'\nPlease choose user:\n 1 = Reception \n 2 = Doctor \n 3 = Laboratory \n 4 = Exit\n')
 
-    user = int(input('User:  '))  
+    user = int(input('User:  \n'))  
     # 1 = "Reception: Main Files"
     # 2 = "Doctor\'s Files"
     # 3 = "Laboratory Department"
