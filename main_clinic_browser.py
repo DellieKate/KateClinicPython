@@ -1,33 +1,38 @@
-# KLM Medical Centre
-# Melbourne, Victoria
-
 # Main page
 
-print(f'Welcome to KLM Medical Centre\n')
+user = 0
+while (user <= 4):
+    print(f'\nWelcome to KLM Medical Centre\n')
+    print(f'Melbourne, Victoria')
 
-print(f'Please choose user:\n 1 = Receptionist \n 2 = Doctor \n 3 = Laboratory \n')
+    print("-" * 25)
 
-user = int(input('User:  '))    
-# 1 = "Reception: Main Files"
-# 2 = "Doctor\'s Files"
-# 3 = "Laboratory Department"
+    print(f'\nPlease choose user:\n 1 = Receptionist \n 2 = Doctor \n 3 = Laboratory \n 4 = Exit\n')
 
-match user:
-    case 1:
-        print(f'Reception: Main Files.')
-        # opens to clinics' main file (patients' directories)
-    case 2:
-        print(f'Doctor\'s Files.')
-        # opens Doctor's Files
-    case 3:
-        print(f'Laboratory Department')
-        # opens lab's files
-    case _:
-        print(f'Invalid user. Please choose another option.')
-        #should include error-handling here
-
-print(f'Welcome to {user}!')
-
-
-
+    user = int(input('User:  '))  
+    # 1 = "Reception: Main Files"
+    # 2 = "Doctor\'s Files"
+    # 3 = "Laboratory Department"
+    # 4 = "Exit"
     
+    match user:
+        case 1:
+            print(f'Welcome to Reception: Main Files.\n')
+            # opens to clinics' main file (patients' directories)
+        case 2:
+            print(f'Welcome to Doctor\'s Files.\n')
+            # opens Doctor's Files
+        case 3:
+            print(f'Welcome to Laboratory Department\n')
+            # opens lab's files
+        case 4:
+            print(f'Thank you!\n')
+            break
+        case _:
+            print(f'Invalid user. Please choose another option.\n')
+            user = 0
+            #should include error-handling here
+            
+  
+
+
