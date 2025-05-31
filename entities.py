@@ -1,12 +1,16 @@
 class Patient:
-    def __init__(self, full_name, age, sex):
+    def __init__(self, id, full_name, age, sex):
+        self.id = id
         self.full_name = full_name
         self.age = age
         self.sex = sex
+        self.lab_test_list = []
         
     def getDetails(self):
-        return (f'Full name: {self.full_name} | Age: {self.age} | Sex: {self.sex}')    
-
+        return (f'Patient ID: {self.id} | Full name: {self.full_name} | Age: {self.age} | Sex: {self.sex}')
+    
+    def confirm_lab_tests(self, lab_test_list):
+        self.lab_tests = lab_test_list
 
 class LabTest:
     def __init__(self, name, description):

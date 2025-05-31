@@ -5,12 +5,12 @@ patient_list = []
 
 user = 0
 while (user <= 4):
-    print(f'\nWelcome to KLM Medical Centre\n')
+    print(f'\nKLM Medical Centre')
     print(f'Melbourne, Victoria')
-
-    print("-" * 25)
-
-    print(f'\nPlease choose user:\n 1 = Receptionist \n 2 = Doctor \n 3 = Laboratory \n 4 = Exit\n')
+    print("-" * 20)
+    print(f'\nWELCOME!')
+   
+    print(f'\nPlease choose user:\n 1 = Reception \n 2 = Doctor \n 3 = Laboratory \n 4 = Exit\n')
 
     user = int(input('User:  '))  
     # 1 = "Reception: Main Files"
@@ -21,7 +21,7 @@ while (user <= 4):
     match user:
         case 1:
             reception_main_menu(patient_list)
-            # opens to clinics' main file (patients' directories)
+            # opens to patients' files
         case 2:
             print(f'\nWelcome to Doctor\'s Files.\n')
             # opens Doctor's Files
