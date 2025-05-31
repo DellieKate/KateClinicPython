@@ -6,9 +6,9 @@ patient_list = []
 
 user = 0
 while (user <= 4):
-    print(f'\nKLM Medical Centre')
-    print(f'Melbourne, Victoria')
-    print("-" * 20)
+    print(f'\n*** KLM MEDICAL CENTRE ***')
+    print(f'-- Melbourne, Victoria --')
+    print("-" * 25)
     print(f'\nWELCOME!')
    
     print(f'\nPlease choose user:\n 1 = Reception \n 2 = Doctor \n 3 = Laboratory \n 4 = Exit\n')
