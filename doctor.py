@@ -1,10 +1,5 @@
 from entities import Patient
 
-# def patient_ID():
-#     if id in Patient:
-#         pID = Patient.getDetails(id)
-#         print(f'Patient ID: {self.id}')
-
 def find_patient_by_id(patient_list, patient_id):
     for patient in patient_list:
         if patient.id == patient_id:
