@@ -1,5 +1,6 @@
 # Main page
 from reception import reception_main_menu
+from doctor import doctor_main_menu
 
 patient_list = []
 
@@ -23,7 +24,7 @@ while (user <= 4):
             reception_main_menu(patient_list)
             # opens to patients' files
         case 2:
-            print(f'\nWelcome to Doctor\'s Files.\n')
+            doctor_main_menu(patient_list)
             # opens Doctor's Files
         case 3:
             print(f'\nWelcome to Laboratory Department\n')
