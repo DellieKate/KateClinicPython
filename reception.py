@@ -38,7 +38,7 @@ def reception_main_menu(patient_list = []):
             case 1:
                 while True:
                     add_patient(patient_list)
-                    add = input('Add another patient? (y/n): ').strip().lower()
+                    add = input('Add another patient? (y/n): \n').strip().lower()
                     if add != 'y':
                         break
             case 2:
