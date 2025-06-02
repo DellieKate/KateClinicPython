@@ -25,8 +25,8 @@ def doctor_main_menu(patient_list = []):
     print(f'\nWelcome to Doctor\'s Files.')
     option = 0
     while (option <= 4):
-        print(f'\nPlease choose an option:\n 1 = Search patient \n 2 = Export patient report \n 3 = Exit\n')
-        option = int(input('Option: \n'))
+        print(f'\nPlease choose an option:\n 1 = Search patient \n 2 = Exit\n')
+        option = int(input('Option: '))
         match option:
             case 1:
                 pID = input('Input patient ID: ' )
@@ -35,7 +35,7 @@ def doctor_main_menu(patient_list = []):
                 print(f'Recommended tests for {patient.full_name}')
                 for test in patient.lab_test_list:
                     print(f'\t {test.description}')                        
-                print_report = input('\nPrint patient\'s report? Y/N\n'  ).strip().capitalize()
+                print_report = input('\nPrint patient\'s report? Y/N \n ').strip().capitalize()
                 if print_report == 'Y':
                     print("Printing patient details...")
                     create_pdf.print(patient)
@@ -44,7 +44,7 @@ def doctor_main_menu(patient_list = []):
                 break
             case _:
                 print(f'\nInvalid option. Please try again.\n')
-                user = 0
-            #should include error-handling here
+                
+        
     
     
