@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import datetime
 
 class Patient:
     def __init__(self, id, full_name, birthday, sex):
@@ -9,7 +9,7 @@ class Patient:
         self.lab_test_list = []
     
     def calculate_age(self, birthday):
-        return date.today().year - birthday.year
+        return datetime.today().date().year - birthday.year
           
     def getDetails(self):
         return (f'Patient ID: {self.id} | Full name: {self.full_name} | Age: {self.age} | Sex: {self.sex}')
