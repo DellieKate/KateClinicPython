@@ -1,24 +1,17 @@
 from fpdf import FPDF
+from entities import Patient
 
-pdf = FPDF ()
 
-pdf.add_page ()
-pdf.set_font("Arial", size = 12)
-
-#Header
-pdf.cell(50, 10, txt="Full name", border=1, align="C")
-pdf.cell(40, 10, txt="Birthday", border=1, align="C")
-pdf.cell(35, 10, txt="Sex", border=1, align="C")
-pdf.cell(60, 10, txt="Lab Recommendations", border=1, align="C")
-
-#Patient rows
-pdf.ln() 
-pdf.cell(50, 10, txt="Kate Mendoza", border=1, align="C")
-pdf.cell(40, 10, txt="01/01/1980", border=1, align="C")
-pdf.cell(35, 10, txt="F", border=1, align="C")
-pdf.cell(60, 10, txt="Lab Recommendations", border=1, align="C")
-pdf.ln() 
-
-pdf.output("Patient_File.pdf")
-
-print("PDF created successfully.")
+def print(patient):
+    pdf = FPDF()
+    pdf.add_page ()
+    pdf.set_font("Arial", size = 12)
+    pdf.cell(0, 10, txt=(f'Patient: {patient.full_name}'), align="L", ln=True)
+    pdf.cell(0, 10, txt=(f"Birthday: {patient.birthday}"), align="L", ln=True)
+    pdf.cell(0, 10, txt=(f"Sex: {patient.sex}"), align="L", ln=True)
+    pdf.set_x(20)
+    pdf.cell(0, 10, txt="Recommended labs", align="L", ln=True)
+    for lab_test in patient.lab_test_list:
+        pdf.set_x(25)
+        pdf.cell(0, 10, txt=(f"{lab_test.description}"), align="L", ln=True)
+    pdf.output("Patient_File.pdf")

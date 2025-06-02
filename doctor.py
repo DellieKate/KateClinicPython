@@ -1,4 +1,5 @@
 from entities import Patient, LabTest, BiochemTest, HemaTest, CytoTest, GenericTest
+import create_pdf
 
 generic_test = [GenericTest("FBC"), GenericTest("EUC"), GenericTest("LFT"), GenericTest("lipids")]
 
@@ -35,8 +36,9 @@ def doctor_main_menu(patient_list = []):
                 for test in patient.lab_test_list:
                     print(f'\t {test.description}')                        
                 print_report = input('\nPrint patient\'s report? Y/N\n'  ).strip().capitalize()
-                if print_report != 'Y':
-                    pass
+                if print_report == 'Y':
+                    print("Printing patient details...")
+                    create_pdf.print(patient)
             case 2:
                 print(f'\nThank you!\n')
                 break

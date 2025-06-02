@@ -4,6 +4,7 @@ class Patient:
     def __init__(self, id, full_name, birthday, sex):
         self.id = id
         self.full_name = full_name
+        self.birthday = birthday
         self.age = self.calculate_age(birthday)
         self.sex = sex
         self.lab_test_list = []

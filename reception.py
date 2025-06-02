@@ -1,5 +1,6 @@
 import random
 import string
+# import shortuuid
 from entities import Patient
 from dateutil.parser import parse
 
