@@ -1,6 +1,7 @@
 from entities import Patient
 import numpy as np
 from dateutil.parser import parse
+import csv
 
 # Add new patient
 def add_patient(patient_list):
@@ -52,7 +53,17 @@ def add_patient(patient_list):
             print(f'{new_patient.getDetails()}')
             
         correct_input = True
-            
+
+#Write CSV file   
+def master_list (patient_list = []):
+    with open('patient_master_list.csv', 'w') as f:
+        writer = csv.writer(f)
+        writer.writerow(['ID', 'Full Name', 'Birthday', 'Sex'])
+        writer.writerows(map(to_list, patient_list))
+
+def to_list(patient):
+    return [patient.id, patient.full_name, patient.birthday, patient.sex]    
+    
 # Call function(options) to main menu  
 def reception_main_menu(patient_list = []):
     print(f'\n--Welcome to Reception: Main Files--\n')
@@ -68,8 +79,9 @@ def reception_main_menu(patient_list = []):
                     if add != 'y':
                         break
             case 2:
-                print(f'Patient files exported to file storage.\n')
-                # Export patient files (CSV files)
+                master_list(patient_list)
+                print(f'Patient files exported to Patients Master List.\n')
+                
             case 3:
                 print(f'\nThank you! Exiting system.\n')
                 break
