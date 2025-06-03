@@ -59,10 +59,7 @@ def master_list (patient_list = []):
     with open('patient_master_list.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['ID', 'Full Name', 'Birthday', 'Sex'])
-        writer.writerows(map(to_list, patient_list))
-
-def to_list(patient):
-    return [patient.id, patient.full_name, patient.birthday, patient.sex]    
+        writer.writerows(map(lambda patient: [patient.id, patient.full_name, patient.birthday, patient.sex], patient_list))
     
 # Call function(options) to main menu  
 def reception_main_menu(patient_list = []):
