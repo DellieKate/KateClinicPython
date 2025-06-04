@@ -24,10 +24,10 @@ def add_patient(patient_list):
         while True:
             try:
                 birthday_str = input("Enter birthdate DD/MM/YYYY: ").strip()
-                birthday = parse(birthday_str).date()
+                birthday = parse(birthday_str, dayfirst=True).date()
                 break
             except (ValueError, OverflowError):
-                print("Please enter a valid date of birth.\n")
+                print("Invalid date. Please enter date of birth.\n")
         
         # Sex / Gender
         while True:
