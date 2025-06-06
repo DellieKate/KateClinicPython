@@ -28,9 +28,6 @@ while True:
                 doctor_main_menu(patient_list)
                 # opens Doctor's Files
             case 3:
-                print(f'\nWelcome to Laboratory Department\n')
-                # opens lab's files
-            case 4:
                 print(f'\nThank you!\n')
                 break
             case _:
