@@ -1,10 +1,10 @@
-##__*Python Assessment*__
+## __*Python Assessment*__
 
 # **Project Title**
 KLM Clinic Patient Registry
 
 ## **Description**
-- An app designed to sort patients' details and recommended laboratory tests in a clinic setting
+- An app designed to input patients' details and recommend laboratory tests in a clinic setting
 
 ### **Features:**
     1. Input basic patient details (reception interface). 
@@ -38,21 +38,21 @@ KLM Clinic Patient Registry
 1. clinic.py 
 - main file where options provided help navigate the whole app
 2. reception.py
-- interface where user inputs patient’s details
-- creates CSV file to store all patients details
+- Interface where user inputs patient’s details.
+- Creates CSV file to store all patients details.
 3. doctor.py
-- user can search patient’s ID and displays data with recommended laboratory tests
-- generates report printable as a PDF
+- Search particular patient through generated ID and displays data with recommended laboratory tests.
+- Generates report and print as a PDF.
 4. entities.py
-- contain entity definitions
+- Contains all entity definitions.
 5. create_pdf.py
-- methods to generate PDF
+- Shows the methods to generate PDF.
 6. requirements.txt
-- lists the required modules and packages to run the app
+- Lists the required modules and packages to run the app.
 
 ## **License:**
 
-This app is licensed under the [Apache License 2.0](https://github.com/DellieKate/KateClinicPython/blob/main/LICENSE)
+This app is licensed under [Apache License 2.0](https://github.com/DellieKate/KateClinicPython/blob/main/LICENSE)
 
 ## **References:**
 [W3schools](https://www.w3schools.com/python/default.asp)
