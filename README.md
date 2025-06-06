@@ -1,4 +1,4 @@
-Python Assessment
+##__*Python Assessment*__
 
 # **Project Title**
 KLM Clinic Patient Registry
@@ -35,26 +35,26 @@ KLM Clinic Patient Registry
 ## **Project Structure:**
 
 *Files:*
-    1. clinic.py 
-    - main file where options provided help navigate the whole app
-    2. reception.py     -interface where user inputs patient’s details
-    -creates CSV file to store all patients details
-    3. doctor.py
-    -user can search patient’s ID and displays data with recommended laboratory tests
-    -generates report printable as a PDF
-    4. entities.py 
-    -contain entity definitions
-    5. create_pdf.py 
-    -methods to generate PDF
-    6. requirements.txt 
-    -lists the required modules and packages to run the app
+1. clinic.py 
+- main file where options provided help navigate the whole app
+2. reception.py
+- interface where user inputs patient’s details
+- creates CSV file to store all patients details
+3. doctor.py
+- user can search patient’s ID and displays data with recommended laboratory tests
+- generates report printable as a PDF
+4. entities.py
+- contain entity definitions
+5. create_pdf.py
+- methods to generate PDF
+6. requirements.txt
+- lists the required modules and packages to run the app
 
 ## **License:**
 
-This app is licensed under the Apache License 2.0 
-(https://github.com/DellieKate/KateClinicPython/blob/main/LICENSE)
+This app is licensed under the [Apache License 2.0](https://github.com/DellieKate/KateClinicPython/blob/main/LICENSE)
 
 ## **References:**
-https://www.w3schools.com/python/default.asp
-https://edstem.org/au/courses/23675/lessons
-https://www.python.org/
+[W3schools](https://www.w3schools.com/python/default.asp)
+[Canvas](https://edstem.org/au/courses/23675/lessons)
+[Phyton](https://www.python.org/)
