@@ -11,11 +11,10 @@ while True:
     print("-" * 25)
     print(f'\nWELCOME!')
 
-    print(f'\nPlease choose user:\n 1 = Reception \n 2 = Doctor \n 3 = Laboratory \n 4 = Exit\n')
+    print(f'\nPlease choose user:\n 1 = Reception \n 2 = Doctor \n 3 = Exit\n')
         # 1 = "Reception: Main Files"
         # 2 = "Doctor\'s Files"
-        # 3 = "Laboratory Department"
-        # 4 = "Exit" 
+        # 3 = "Exit" 
     
     try:
         user = int(input('User:  '))  
@@ -31,10 +30,10 @@ while True:
                 print(f'\nThank you!\n')
                 break
             case _:
-                print(f'\nInvalid user. Please choose from option 1 to 4.\n')
+                print(f'\nInvalid user. Please choose from option 1 to 3.\n')
                 
     except ValueError:
-        print(f'\nInvalid input. Please enter a valid number between 1 and 4.')
+        print(f'\nInvalid input. Please enter a valid number between 1 and 3.')
                 
     
                 
