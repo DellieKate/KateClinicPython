@@ -27,10 +27,6 @@ class BiochemTest(LabTest):
     def __init__(self):
         self.upper_limit = 2.5
         super().__init__('PSA', f'Normal PSA < {self.upper_limit} ng/mL')
-        
-    # def set_result(self, reading):
-    #     if reading > self.upper_limit:
-    #         # Do something!!!!
             
 class HemaTest(LabTest):
     def __init__(self):
