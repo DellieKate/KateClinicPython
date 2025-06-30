@@ -11,7 +11,7 @@ def print(patient):
     pdf.cell(0, 10, txt=(f"Sex: {patient.sex}"), align="L", ln=True)
     pdf.set_x(20)
     pdf.cell(0, 10, txt="Recommended labs", align="L", ln=True)
-    for lab_test in patient.lab_test_list:
+    for lab_test in patient.labtest_list:
         pdf.set_x(25)
         pdf.cell(0, 10, txt=(f"{lab_test.description}"), align="L", ln=True)
     pdf.output("Patient_File.pdf")
