@@ -1,6 +1,24 @@
 from datetime import datetime
 
 class Patient:
+    """
+    A class used to represent a Patient
+    
+    ...
+    Attributes
+    ----------
+    id : int
+        the id generated randomly from the reception module using numpy
+    full_name : str
+        the full name of the patient
+    birthday : date
+        the birthday extracted from parse
+    age : int
+        the age computed from birthday
+    sex : str
+        the sex of the patient
+    
+    """
     def __init__(self, id, full_name, birthday, sex):
         self.id = id
         self.full_name = full_name
@@ -9,21 +27,71 @@ class Patient:
         self.sex = sex
         self.labtest_list = []
     
+    """
+    Parameters
+    ----------
+    id : int
+        the id generated randomly from the reception module using numpy
+    full_name : str
+        the full name of the patient
+    birthday : date
+        the birthday extracted from parse
+    age : int
+        the age computed from birthday
+    sex : str
+        the sex of the patient
+    labtest_list: list
+        creates a list of labtests for the patient
+    
+    """
+    
     def calculate_age(self, birthday):
-        return datetime.today().date().year - birthday.year
-          
+       return datetime.today().date().year - birthday.year
+    """Returns the current age of the patient after computing from birthday.
+    """
+    
     def getDetails(self):
         return (f'Patient ID: {self.id} | Full name: {self.full_name} | Age: {self.age} | Sex: {self.sex}')
+    """Returns all the details of patient in the self object.
+    """
     
     def confirm_labtests(self, labtest_list):
         self.labtests = labtest_list
+    """Defines the list of labtests specifically for the patient.
+    """
 
 class LabTest:
+    """
+    A class used to represent a Labtest
+    
+    ...
+    Attributes
+    ----------
+    name : str
+        name of the labtest
+    description : str
+        description of the labtest including some results
+    
+    """
+    
     def __init__(self, name, description):
         self.name = name
         self.description = description
-        
+    
 class BiochemTest(LabTest):
+    """
+    A class used to represent a BiochemTest that inherits the attributes of LabTest (argument)
+    
+    ...
+    Attributes
+    ----------
+    upper_limit : float
+        includes the upper limit value of the test
+    __init__ 
+        inherits the attribute of the parent class
+    
+    """
+    
     def __init__(self):
         self.upper_limit = 2.5
         super().__init__('PSA', f'Normal PSA < {self.upper_limit} ng/mL')

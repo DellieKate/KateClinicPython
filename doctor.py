@@ -31,7 +31,7 @@ def doctor_main_menu(patient_list = []):
             case 1:
                 pID = input('Input patient ID: ' )
                 patient = find_patient_by_id(patient_list, pID)
-                recommend_labtest(patient)
+                recommend_labtest(patient).strip()
                 print(f'Recommended tests for {patient.full_name}')
                 for test in patient.labtest_list:
                     print(f'\t {test.description}')                        

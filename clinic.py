@@ -2,9 +2,12 @@
 from reception import reception_main_menu
 from doctor import doctor_main_menu
 
+# Define an empty patient list to start with
 patient_list = []
 
+# Starting with a user = 0 since no input yet from the user
 user = 0
+
 while True:
     print(f'\n*** KLM MEDICAL CENTRE ***')
     print(f'-- Melbourne, Victoria --')
@@ -15,7 +18,7 @@ while True:
         # 1 = "Reception: Main Files"
         # 2 = "Doctor\'s Files"
         # 3 = "Exit" 
-    
+  
     try:
         user = int(input('User:  '))  
                        
@@ -31,7 +34,7 @@ while True:
                 break
             case _:
                 print(f'\nInvalid user. Please choose from option 1 to 3.\n')
-                
+
     except ValueError:
         print(f'\nInvalid input. Please enter a valid number between 1 and 3.')
                 
