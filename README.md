@@ -52,6 +52,20 @@ python3 clinic.py
 
 Licensed under [Apache License 2.0](https://github.com/DellieKate/KateClinicPython/blob/main/LICENSE)
 
+## **PIP-Licenses:**
+
+| Name            | Version     | License                                       |
+|-----------------|-------------|-----------------------------------------------|
+| Pygments        | 2.19.2      | BSD License                                   |
+| fpdf            | 1.7.2       | GNU Lesser General Public License v3 (LGPLv3) |
+| iniconfig       | 2.1.0       | MIT License                                   |
+| numpy           | 2.2.6       | BSD License                                   |
+| packaging       | 25.0        | Apache Software License; BSD License          |
+| pluggy          | 1.6.0       | MIT License                                   |
+| pytest          | 8.4.1       | MIT License                                   |
+| python-dateutil | 2.9.0.post0 | Apache Software License; BSD License          |
+| six             | 1.17.0      | MIT License                                   |
+
 ## **References:**
 [W3schools](https://www.w3schools.com/python/default.asp)
 

@@ -1,0 +1,44 @@
+Pygments
+2.19.2
+BSD License
+Pygments is a syntax highlighting package written in Python.
+
+fpdf
+1.7.2
+GNU Lesser General Public License v3 (LGPLv3)
+Simple PDF generation for Python
+
+iniconfig
+2.1.0
+MIT License
+brain-dead simple config-ini parsing
+
+numpy
+2.2.6
+BSD License
+Fundamental package for array computing in Python
+
+packaging
+25.0
+Apache Software License; BSD License
+Core utilities for Python packages
+
+pluggy
+1.6.0
+MIT License
+plugin and hook calling mechanisms for python
+
+pytest
+8.4.1
+MIT License
+pytest: simple powerful testing with Python
+
+python-dateutil
+2.9.0.post0
+Apache Software License; BSD License
+Extensions to the standard Python datetime module
+
+six
+1.17.0
+MIT License
+Python 2 and 3 compatibility utilities

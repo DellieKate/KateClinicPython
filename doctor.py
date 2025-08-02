@@ -4,17 +4,17 @@ import create_pdf
 generic_test = [GenericTest("FBC"), GenericTest("EUC"), GenericTest("LFT"), GenericTest("lipids")]
 
 def recommend_labtest(patient):
-    if patient.age <=15:
+    if patient.age <= 15:
         print(f'Observation recommended.')
     if 15 <= patient.age <= 18:
         patient.labtest_list.extend(generic_test)
-    if patient.age >=18 :
+    if patient.age >= 18 :
         patient.labtest_list.extend(generic_test)
         patient.labtest_list.append(HemaTest())
-        if patient.age >= 25 and patient.sex == 'F':
-            patient.labtest_list.append(CytoTest())
-        if patient.age >= 45 and patient.sex != 'F':
-            patient.labtest_list.append(BiochemTest())        
+    if patient.age >= 25 and patient.sex == 'F':
+        patient.labtest_list.append(CytoTest())
+    if patient.age >= 45 and patient.sex != 'F':
+        patient.labtest_list.append(BiochemTest())        
     
 def find_patient_by_id(patient_list, patient_id):
     for patient in patient_list:
