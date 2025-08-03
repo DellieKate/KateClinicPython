@@ -54,7 +54,7 @@ Licensed under [Apache License 2.0](https://github.com/DellieKate/KateClinicPyth
 
 ## **PIP-Licenses:**
 
-Full detail in [Third party licenses] (third_party_licenses.txt)
+Full detail in [Third party licenses](third_party_licenses.txt)
 
 | Name            | Version     | License                                       |
 |-----------------|-------------|-----------------------------------------------|
