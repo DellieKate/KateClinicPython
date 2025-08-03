@@ -3,6 +3,31 @@ import numpy as np
 from dateutil.parser import parse
 import csv
 
+# Call function(options) to main menu  
+def reception_main_menu(patient_list = []):
+    print(f'\n--Welcome to Reception: Main Files--\n')
+    option = 0
+    while (option <= 4):
+        print(f'Please choose an option:\n 1 = Add new patient \n 2 = Export patient details \n 3 = Exit\n')
+        option = int(input('Option: '))
+        match option:
+            case 1:
+                while True:
+                    add_patient(patient_list)
+                    add = input('Add another patient? (y/n): ').strip().lower()
+                    if add != 'y':
+                        break
+            case 2:
+                master_list(patient_list)
+                print(f'Patient files exported to Patients Master List.\n')
+                
+            case 3:
+                print(f'\nThank you! Exiting system.\n')
+                break
+            case _:
+                print(f'\nInvalid option. Please try again.\n')
+ 
+ 
 # Add new patient
 def add_patient(patient_list):
     correct_input = False
@@ -53,39 +78,14 @@ def add_patient(patient_list):
             print(f'{new_patient.getDetails()}')
             
         correct_input = True
-
-#Write CSV file   
+                
+ #Write CSV file   
 def master_list (patient_list = []):
     with open('patient_master_list.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['ID', 'Full Name', 'Birthday', 'Sex'])
         writer.writerows(map(lambda patient: [patient.id, patient.full_name, patient.birthday, patient.sex], patient_list))
-    
-# Call function(options) to main menu  
-def reception_main_menu(patient_list = []):
-    print(f'\n--Welcome to Reception: Main Files--\n')
-    option = 0
-    while (option <= 4):
-        print(f'Please choose an option:\n 1 = Add new patient \n 2 = Export patient details \n 3 = Exit\n')
-        option = int(input('Option: '))
-        match option:
-            case 1:
-                while True:
-                    add_patient(patient_list)
-                    add = input('Add another patient? (y/n): ').strip().lower()
-                    if add != 'y':
-                        break
-            case 2:
-                master_list(patient_list)
-                print(f'Patient files exported to Patients Master List.\n')
-                
-            case 3:
-                print(f'\nThank you! Exiting system.\n')
-                break
-            case _:
-                print(f'\nInvalid option. Please try again.\n')
-                
-   
+      
             
   
     

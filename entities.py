@@ -1,24 +1,24 @@
 from datetime import datetime
-
+    
 class Patient:
-    """
-    A class used to represent a Patient
-    
-    ...
-    Attributes
-    ----------
-    id : int
-        the id generated randomly from the reception module using numpy
-    full_name : str
-        the full name of the patient
-    birthday : date
-        the birthday extracted from parse
-    age : int
-        the age computed from birthday
-    sex : str
-        the sex of the patient
-    
-    """
+        """
+        A class used to represent a Patient
+        
+        ...
+        Attributes
+        ----------
+        id : int
+            the id generated randomly from the reception module using numpy
+        full_name : str
+            the full name of the patient
+        birthday : date
+            the birthday extracted from parse
+        age : int
+            the age computed from birthday
+        sex : str
+            the sex of the patient
+        
+        """
     def __init__(self, id, full_name, birthday, sex):
         self.id = id
         self.full_name = full_name
@@ -26,39 +26,27 @@ class Patient:
         self.age = self.calculate_age(birthday)
         self.sex = sex
         self.labtest_list = []
-    
-    """
-    Parameters
-    ----------
-    id : int
-        the id generated randomly from the reception module using numpy
-    full_name : str
-        the full name of the patient
-    birthday : date
-        the birthday extracted from parse
-    age : int
-        the age computed from birthday
-    sex : str
-        the sex of the patient
-    labtest_list: list
-        creates a list of labtests for the patient
-    
-    """
+
     
     def calculate_age(self, birthday):
        return datetime.today().date().year - birthday.year
-    """Returns the current age of the patient after computing from birthday.
     """
+    Calculates the current age of the patient.
+
+    Uses:
+        datetime.now() from the datetime module.
     
+    Returns:
+        datetime: Current local date and time.
+    """
+
     def getDetails(self):
         return (f'Patient ID: {self.id} | Full name: {self.full_name} | Age: {self.age} | Sex: {self.sex}')
-    """Returns all the details of patient in the self object.
-    """
+        """Returns all the details of patient in the self object."""
     
     def confirm_labtests(self, labtest_list):
         self.labtests = labtest_list
-    """Defines the list of labtests specifically for the patient.
-    """
+        """Defines the list of labtests specifically for the patient."""
 
 class LabTest:
     """
