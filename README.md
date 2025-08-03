@@ -73,4 +73,4 @@ Full detail in [Third party licenses](third_party_licenses.txt)
 
 [Canvas](https://edstem.org/au/courses/23675/lessons)
 
-[Phyton](https://www.python.org/)
+[Python](https://www.python.org/)
